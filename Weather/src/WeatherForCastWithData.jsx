@@ -10,7 +10,7 @@ const WeatherForecastWithData = (WeatherForecast) => {
     const fetchWeatherData = async (city) => {
       setLoading(true);
       try {
-        const response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=829b6789ec684b5188b40829242006&q=${city}&aqi=no`);
+        const response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=API_KEY&q=${city}&aqi=no`);
         setWeatherData(response.data);
         setError(null);
       } catch (err) {
